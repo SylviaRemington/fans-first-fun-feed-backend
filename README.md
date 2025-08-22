@@ -24,7 +24,7 @@ This app will, most likely, be simplified a lot; and start out as a way for fans
 <hr>
 
 ## Utilizing Express JWT Auth Template 
-### --As per class suggestion for more ease creating backend.--
+### --As per class suggestion for more ease creating backend api--
 
 ## About
 
