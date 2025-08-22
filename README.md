@@ -4,7 +4,7 @@
 
 ![FansFirstBlue](./public/images/smallerFansFirst.png)
 
-This app is going to be a **MERN stack app** for **Savannah Bananas** fans (Savannah Bananas is an alternative baseball team known for dances, trick plays, and fan engagement). The initial idea was for it to be called: The Banana Fan Dance and Moment Share App. 
+This app is going to be a **MERN stack app** for **Savannah Bananas** fans (**Savannah Bananas is an alternative baseball team known for dances, trick plays, and fan engagement**). The initial idea was for it to be called: The Banana Fan Dance and Moment Share App. 
 
 - Live fans will be able to add dance moves (name, type) to perform at games; while both live and online fans will be able to share favorite, awesome moments from the game (text, category like trick plays, dance moves, or Dad-bod-cheer-squad) inspired by game events or IG videos. 
 
