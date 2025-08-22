@@ -19,7 +19,12 @@ This app will, most likely, be simplified a lot; and start out as a way for fans
 ### Addtl:
 In this, I’ll build an Express API that serves as the back-end for a full-stack "moment-sharing" application called Fans First Fun Feed. Within this Express API, I’ll implement full CRUD functionality.
 
+### About Express API JWT Auth Template:
+My Express API will make use of the Express API JWT Auth Template. This template provides this Express application with pre configured JWT Authentication. This style of authentication in HTTP uses tokens, or unique identifier strings, to tell who a user is when they’re making an authenticated request.
 
+Thanks to this template, this Express application will already be able to sign up and sign in users. The template also includes a verifyToken middleware function. The verifyToken middleware ensures that any route following it in the middleware pipeline will require authentication before proceeding.
+
+To demonstrate JWT Authentication, my Express application will use verifyToken to protect all routes related to the hoot resource. This means users will be required to sign in before getting access to any Fans First Fun Feed data.
 
 
 <hr>
