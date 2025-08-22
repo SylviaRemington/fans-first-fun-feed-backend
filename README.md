@@ -1,6 +1,8 @@
-# Fans First Fun Feed -- BACKEND EXPRESS API CREATION
+# Fans First Fun Feed
 
-![FansFirstBlue](./public/images/FansFirst_blue.png)
+**BACKEND EXPRESS API CREATION**
+
+![FansFirstBlue](./public/images/smallerFansFirst.png)
 
 This app is going to be a MERN stack app for Savannah Bananas fans (an alternative baseball team known for dances, trick plays, and fan engagement). The initial idea was for it to be called: The Banana Fan Dance and Moment Share App. Live fans will be able to add dance moves (name, type) to perform at games; while both live and online fans will be able to share favorite, awesome moments from the game (text, category like trick plays, dance moves, or Dad-bod-cheer-squad) inspired by game events or IG videos. All entries will appear in a community feed for everyone to view and like. This is a way to bring fans together in a simple, list-based interface!
 
