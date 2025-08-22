@@ -1,6 +1,6 @@
 # Fans First Fun Feed
 
-**BACKEND EXPRESS API CREATION - Started August 21st, 2025 for GA Project #3**
+**BACKEND EXPRESS API CREATION Started August 21st, 2025 for GA Project #3** <br>
 **We have one week to complete this project.**
 
 ![FansFirstBlue](./public/images/smallerFansFirst.png)
