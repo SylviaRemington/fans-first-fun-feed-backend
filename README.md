@@ -3,7 +3,9 @@
 **BACKEND EXPRESS API CREATION -- Started August 21st, 2025 for GA Project #3** <br>
 **We have one week to complete this project.**
 
-![FansFirstBlue](./public/images/smallerFansFirst.png) <br>
+![FansFirstBlue](./public/images/smallerFansFirst.png) 
+
+<br>
 
 This app is going to be a **MERN stack app** for **Savannah Bananas** fans.
 
