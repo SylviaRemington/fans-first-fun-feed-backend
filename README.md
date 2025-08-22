@@ -16,7 +16,8 @@ This app is going to be a **MERN stack app** for **Savannah Bananas** fans.
 
 This app will, most likely, be simplified a lot; and start out as a way for fans to share great, fun moments from the game. Once I have that CRUD functionality accomplished, I will move on to creating the dance move part of it. That will be more for a stretch goal; and this stretch goal portion may be accomplished after the Project 3 deadline (since we only have a week to create a full stack app with both backend and front end).
 
-
+### Addtl:
+In this, I’ll build an Express API that serves as the back-end for a full-stack "moment-sharing" application called Fans First Fun Feed. Within this Express API, I’ll implement full CRUD functionality.
 
 
 
