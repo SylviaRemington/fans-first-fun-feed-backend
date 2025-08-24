@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 
 
 // My FunMomentSchema (I researched correct way to type schema and it says Pascal Case, so using that here.)
+// (More notes on this below regarding Pascal case and naming conventions.)
 const FunMomentSchema = new mongoose.Schema({
     title: {
         type: String,
@@ -28,6 +29,27 @@ const FunMomentSchema = new mongoose.Schema({
 
 // registering the model with mongoose
 const FunMoment = 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
