@@ -30,7 +30,8 @@ const FunMomentSchema = new mongoose.Schema({
 // registering the model with mongoose
 const FunMoment = mongoose.model('FunMoment', FunMomentSchema);
 
-
+// exporting the model so that the rest of the application has access to it
+module.exports = FunMoment;
 
 
 
