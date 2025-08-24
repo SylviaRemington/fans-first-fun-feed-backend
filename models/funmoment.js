@@ -1,8 +1,18 @@
 // importing mongoose library - Before we're able to define our model and schema, we first need to import the mongoose library.
 const mongoose = require('mongoose');
 
-// Creating the CommentSchema
 
+// Creating the CommentSchema
+const CommentSchema = new mongoose.Schema(
+  {
+    text: {
+      type: String,
+      required: true
+    },
+    author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
+  },
+  { timestamps: true }
+);
 
 
 // Creating the FunMomentSchema
@@ -31,13 +41,13 @@ const FunMomentSchema = new mongoose.Schema({
     { timestamps: true }
 );
 
-// registering the model with mongoose
+
+// Registering the model with mongoose
 const FunMoment = mongoose.model('FunMoment', FunMomentSchema);
 
-// exporting the model so that the rest of the application has access to it
+
+// Exporting the model so that the rest of the application has access to it
 module.exports = FunMoment;
-
-
 
 
 
