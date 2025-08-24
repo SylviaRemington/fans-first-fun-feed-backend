@@ -28,7 +28,7 @@ const FunMomentSchema = new mongoose.Schema({
 );
 
 // registering the model with mongoose
-const FunMoment = 
+const FunMoment = mongoose.model('FunMoment', FunMomentSchema);
 
 
 
