@@ -36,3 +36,17 @@ app.listen(3000, () => {
 
 // Because above listening on port 3000 in server.js...
 // Will show output here: http://localhost:3000
+
+
+
+
+
+// Notes for myself on Postman and using bearer tokens
+/*
+With this collection, I’ll be able to group a series of Postman requests, 
+and reuse them as necessary. This will make it easier to return to previous 
+requests later. The other advantage relates to authorization. For this, I’ll need 
+to include a bearer token on all future requests for "FunMoment". By using a 
+collection, all CRUD requests included in the collection will be able to share 
+the same token. Dooode, that makes it so much easier!!!!
+*/
