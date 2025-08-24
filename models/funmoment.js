@@ -1,6 +1,7 @@
 // importing mongoose library - Before we're able to define our model and schema, we first need to import the mongoose library.
 const mongoose = require('mongoose');
 
+// ___________________________________________________________________________________________________________________________
 
 // Creating the CommentSchema
 const CommentSchema = new mongoose.Schema(
@@ -13,7 +14,12 @@ const CommentSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+// Information about the CommentSchema (above):
+// I have to be sure to place the commentSchema above the FunMomentSchema because it will be referenced inside that object as per previous lessons.
+// Also, I don’t need to compile the commentSchema into a model, or export it, because it is embedded inside the parent FunMomentSchema. 
+// Because of all of the above, any functionality related to the comments will go through the FunMoment first.
 
+// ___________________________________________________________________________________________________________________________
 
 // Creating the FunMomentSchema
 // My FunMomentSchema (I researched correct way to type schema and it says Pascal Case, so using that here.)
@@ -41,17 +47,17 @@ const FunMomentSchema = new mongoose.Schema({
     { timestamps: true }
 );
 
+// ___________________________________________________________________________________________________________________________
 
 // Registering the model with mongoose
 const FunMoment = mongoose.model('FunMoment', FunMomentSchema);
 
+// ___________________________________________________________________________________________________________________________
 
 // Exporting the model so that the rest of the application has access to it
 module.exports = FunMoment;
 
-
-
-
+// ___________________________________________________________________________________________________________________________
 
 
 // NOTES ON NAMING CONVENTIONS & USING CAMEL CASE //PLUS ADDTL NOTES
