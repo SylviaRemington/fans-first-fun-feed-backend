@@ -44,20 +44,6 @@ module.exports = FunMoment;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // NOTES ON NAMING CONVENTIONS & USING CAMEL CASE //PLUS ADDTL NOTES
 // My FunMomentSchema (I researched correct way to type schema and it says Pascal Case, so using that here.)...
 // My FunMomentSchema will consist of the following:
