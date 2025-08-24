@@ -1,7 +1,11 @@
 // importing mongoose library - Before we're able to define our model and schema, we first need to import the mongoose library.
 const mongoose = require('mongoose');
 
+// Creating the CommentSchema
 
+
+
+// Creating the FunMomentSchema
 // My FunMomentSchema (I researched correct way to type schema and it says Pascal Case, so using that here.)
 // (More notes on this below regarding Pascal case and naming conventions.)
 const FunMomentSchema = new mongoose.Schema({
