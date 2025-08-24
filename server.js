@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(logger('dev'));
 
 // Routes
-app.use('/auth', authRouter);
+app.use('/auth', authRouter); //all routes with authRouter will begin with /auth including the sign-up & sign-in routes
 app.use('/test-jwt', testJwtRouter);
 app.use('/users', usersRouter);
 

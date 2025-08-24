@@ -7,7 +7,7 @@ const User = require('../models/User');
 
 const saltRounds = 12;
 
-router.post('/sign-up', async (req, res) => {
+router.post('/sign-up', async (req, res) => { //sign-up route //as a result of this with Postman will be making requests to POST /auth/sign-up
   try {
     const userInDatabase = await User.findOne({ username: req.body.username });
     
@@ -24,7 +24,8 @@ router.post('/sign-up', async (req, res) => {
 
     const token = jwt.sign({ payload }, process.env.JWT_SECRET);
 
-    res.status(201).json({ token });
+    res.status(201).json({ token }); //the response issued by the sign-up route & the route returns a token
+    // As per note in last line: the fact that the route returns a token is important because then all other features in this application will be protected, requiring authenticated requests to access them.
   } catch (err) {
     res.status(500).json({ err: err.message });
   }
