@@ -34,3 +34,5 @@ app.listen(3000, () => {
   console.log('The express app is ready!');
 });
 
+// Because above listening on port 3000 in server.js...
+// Will show output here: http://localhost:3000
