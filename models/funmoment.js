@@ -40,6 +40,7 @@ const FunMomentSchema = new mongoose.Schema({
         // Could also add which specific team it's related to -- this could be a stretch goal
     },
     author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+    comments: [CommentSchema], 
 },
 
     // This will give my funmoment documents createdAt and updatedAt properties.
