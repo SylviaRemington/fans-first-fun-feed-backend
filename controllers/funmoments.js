@@ -18,5 +18,8 @@ const FunMoment = require("../models/funmoment.js");
 const router = express.Router();
 
 // add routes here
+// CREATE FUNMOMENT - This is a POST ROUTE - URL ends with /funmoments
+// We're defining the route here:
+
 
 module.exports = router;
