@@ -22,7 +22,17 @@ const router = express.Router();
 // CREATE FUNMOMENT - This is a POST ROUTE - URL ends with /funmoments
 // We're defining the route here that listens for POST requests on /funmoments:
 router.post("/", verifyToken, async (req, res) => {
-  // new route
+   try {
+    // Adding logged-in user as the author
+    req.body.author = req.user._id;
+    // Creating the funmoment
+    const funmoment = await FunMoment.create(req.body);
+    funmoment._doc.author = req.user;
+    // Sending a json response here
+    res.status(201).json(funmoment);
+  } catch (err) {
+    res.status(500).json({ err: err.message });
+  }
 });
 /*
 NOTE:
