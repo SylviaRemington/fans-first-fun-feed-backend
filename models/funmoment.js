@@ -24,6 +24,7 @@ const CommentSchema = new mongoose.Schema(
 // Creating the FunMomentSchema
 // My FunMomentSchema (I researched correct way to type schema and it says Pascal Case, so using that here.)
 // (More notes on this below regarding Pascal case and naming conventions.)
+// Now, newer info suggests that what I researched earlier was incorrect. The correct information is to use a different naming convention. This is highly frustrating, but I will fix it across everything.
 const FunMomentSchema = new mongoose.Schema({
     title: {
         type: String,
