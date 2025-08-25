@@ -45,7 +45,7 @@ for handling authentication when securing routes individually.
 
 // ---------------------------------------------------------------------------------------
 
-// VIEW FUNMOMENTS - This is a GET route - URL also ends in /funmoments - This is an index of all of the funmoments compiled in one place.
+// VIEW FUNMOMENTS (plural) - This is a GET route - URL also ends in /funmoments - This is an index of all of the funmoments compiled in one place.
 // Also, a user needs to be logged in to view all funmoments.
 // This route listens for GET requests on /funmoments.
 router.get("/", verifyToken, async (req, res) => {
@@ -65,7 +65,7 @@ router.get("/", verifyToken, async (req, res) => {
 
 // ---------------------------------------------------------------------------------------
 
-// VIEW FUNMOMENT / Like a Showpage when we did express and EJS - 
+// VIEW FUNMOMENT (individual) / Like a Showpage when we did express and EJS - 
 // This is a GET route - URL ends in the following /funmoments/:id
 
 // FIRST SHOWPAGE BEFORE ADDING COMMENTS SECTION:
@@ -80,6 +80,50 @@ router.get("/:id", verifyToken, async (req, res) => {
         res.status(500).json({ err: err.message });
     }
 });
+
+// ---------------------------------------------------------------------------------------
+
+// UPDATE FUNMOMENT - This is a PUT route - URL ends in this format /funmoments/:id
+
+router.put("/:id", verifyToken, async (req, res) => {
+    // add route
+    try {
+        // Find the funmoment:
+        const funmoment = await FunMoment.findById(req.params.id);
+
+        // Check permissions:
+        if (!funmoment.author.equals(req.user._id)) {
+            return res.status(403).send("Incorrect permissions - You don't have clearance to update this Fun Moment.");
+        }
+
+        // Update funmoment:
+        const updatedFunMoment = await FunMoment.findByIdAndUpdate(
+            req.params.id,
+            req.body,
+            { new: true }
+        );
+
+        // Append req.user to the author property:
+        updatedFunMoment._doc.author = req.user;
+
+        // Issue JSON response:
+        res.status(200).json(updatedFunMoment);
+
+    } catch (err) {
+        res.status(500).json({ err: err.message });
+    }
+});
+
+// As an extra layer of protection, I'm using conditional rendering in my React app 
+// to limit access to this functionality so that only the author of a hoot can view the 
+// UI elements that allow editing.
+
+// ---------------------------------------------------------------------------------------
+
+
+
+
+
 
 
 // ---------------------------------------------------------------------------------------
