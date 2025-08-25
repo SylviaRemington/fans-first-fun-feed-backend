@@ -65,6 +65,9 @@ router.get("/", verifyToken, async (req, res) => {
 
 // ---------------------------------------------------------------------------------------
 
+// VIEW FUNMOMENT / Like a Showpage when we did express and EJS - 
+// This is a GET route - URL ends in the following /funmoments/:id
+
 
 
 // ---------------------------------------------------------------------------------------
