@@ -19,6 +19,8 @@ const router = express.Router();
 
 // ADD ROUTES HERE
 
+// ---------------------------------------------------------------------------------------
+
 // CREATE FUNMOMENT - This is a POST ROUTE - URL ends with /funmoments
 // We're defining the route here that listens for POST requests on /funmoments:
 router.post("/", verifyToken, async (req, res) => {
@@ -41,5 +43,30 @@ in which middleware is applied elsewhere in the application. This approach is th
 for handling authentication when securing routes individually.
 */
 
+// ---------------------------------------------------------------------------------------
+
+// VIEW FUNMOMENTS - This is a GET route - URL also ends in /funmoments - This is an index of all of the funmoments compiled in one place.
+// Also, a user needs to be logged in to view all funmoments.
+// This route listens for GET requests on /funmoments.
+router.get("/", verifyToken, async (req, res) => {
+    try {
+        // Using find({}) method of the FunMoment model to retrieve all funmoments from the database
+        const funmoments= await FunMoment.find({})
+            // populating method - using this to populate the author property of each funmoment with a user object
+            .populate("author")
+            // sort method - using this method to sort funmoments in descending order (so that the most recent entries are at the top)
+            .sort({ createdAt: "desc" });
+        // After the new funmoments are retrieved, this is where we send a JSON response containing the funmoments array.
+        res.status(200).json(funmoments);
+    } catch (err) {
+        res.status(500).json({ err: err.message });
+    }
+});
+
+// ---------------------------------------------------------------------------------------
+
+
+
+// ---------------------------------------------------------------------------------------
 
 module.exports = router;
