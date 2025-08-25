@@ -88,25 +88,32 @@ router.get("/:id", verifyToken, async (req, res) => {
 router.put("/:id", verifyToken, async (req, res) => {
     // add route
     try {
-        // Find the funmoment:
+        // Finding the funmoment & retrieving the funmoment from the database so we can update it:
         const funmoment = await FunMoment.findById(req.params.id);
 
-        // Check permissions:
+        // Checking permissions - checking if user has permission to update the funmoment:
         if (!funmoment.author.equals(req.user._id)) {
+            // If condition and values don't match, responding with a 403 status and message to user.
             return res.status(403).send("Incorrect permissions - You don't have clearance to update this Fun Moment.");
         }
 
-        // Update funmoment:
+        // Updating the funmoment - If user has permission to update, calling on FunMoment model & findByIdAndUpdate method:
         const updatedFunMoment = await FunMoment.findByIdAndUpdate(
+
+            // this argument below locates the funmoment:
             req.params.id,
+
+            // this argument below is used to update the funmoment document
             req.body,
+
+            // this argument says that we want this method to return the updated document
             { new: true }
         );
 
-        // Append req.user to the author property:
+        // Appending a complete user to the updatedFunMoment document(req.user):
         updatedFunMoment._doc.author = req.user;
 
-        // Issue JSON response:
+        // This is the issuing of a json response with the updatedFunMoment object:
         res.status(200).json(updatedFunMoment);
 
     } catch (err) {
