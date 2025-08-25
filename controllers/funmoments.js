@@ -68,6 +68,15 @@ router.get("/", verifyToken, async (req, res) => {
 // VIEW FUNMOMENT / Like a Showpage when we did express and EJS - 
 // This is a GET route - URL ends in the following /funmoments/:id
 
+// FIRST SHOWPAGE BEFORE ADDING COMMENTS SECTION:
+router.get("/:id", verifyToken, async (req, res) => {
+    try {
+        const funmoment = await FunMoment.findById(req.params.id).populate("author");
+        res.status(200).json(funmoment);
+    } catch (err) {
+        res.status(500).json({ err: err.message });
+    }
+});
 
 
 // ---------------------------------------------------------------------------------------
