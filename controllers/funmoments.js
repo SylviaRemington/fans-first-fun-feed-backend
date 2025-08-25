@@ -17,9 +17,19 @@ const verifyToken = require("../middleware/verify-token.js");
 const FunMoment = require("../models/funmoment.js");
 const router = express.Router();
 
-// add routes here
+// ADD ROUTES HERE
+
 // CREATE FUNMOMENT - This is a POST ROUTE - URL ends with /funmoments
-// We're defining the route here:
+// We're defining the route here that listens for POST requests on /funmoments:
+router.post("/", verifyToken, async (req, res) => {
+  // new route
+});
+/*
+NOTE:
+Also, adding verifyToken directly to this route guarantees its protection, independent of the order 
+in which middleware is applied elsewhere in the application. This approach is the recommended method 
+for handling authentication when securing routes individually.
+*/
 
 
 module.exports = router;
