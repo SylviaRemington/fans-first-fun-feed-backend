@@ -11,6 +11,7 @@ const logger = require('morgan');
 const authRouter = require('./controllers/auth');
 const testJwtRouter = require('./controllers/test-jwt');
 const usersRouter = require('./controllers/users');
+const funmomentsRouter = require("./controllers/funmoments.js"); //adding funmomentsRouter to server.js
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI);
@@ -28,6 +29,8 @@ app.use(logger('dev'));
 app.use('/auth', authRouter); //all routes with authRouter will begin with /auth including the sign-up & sign-in routes
 app.use('/test-jwt', testJwtRouter);
 app.use('/users', usersRouter);
+app.use("/funmoments", funmomentsRouter); //this is called "mount the router"
+
 
 // Start the server and listen on port 3000
 app.listen(3000, () => {
