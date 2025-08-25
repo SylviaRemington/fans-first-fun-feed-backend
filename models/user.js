@@ -1,3 +1,5 @@
+// MODEL & SCHEMA SECTION FOR USER
+
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
