@@ -128,6 +128,7 @@ router.put("/:id", verifyToken, async (req, res) => {
 // ---------------------------------------------------------------------------------------
 
 // DELETE FUNMOMENT - This is a DELETE route - URL ends in /funmoments/:id - also make sure put an actual id in POSTMAN for the web url too
+// User needs to be logged in to delete a hoot, so including verifyToken middleware
 router.delete("/:id", verifyToken, async (req, res) => {
     try {
         const funmoment = await FunMoment.findById(req.params.id);
