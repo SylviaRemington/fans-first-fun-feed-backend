@@ -127,11 +127,22 @@ router.put("/:id", verifyToken, async (req, res) => {
 
 // ---------------------------------------------------------------------------------------
 
+// DELETE FUNMOMENT - This is a DELETE route - URL ends in /funmoments/:id - also make sure put an actual id in POSTMAN for the web url too
+router.delete("/:id", verifyToken, async (req, res) => {
+    try {
+        const funmoment = await FunMoment.findById(req.params.id);
 
+        if (!funmoment.author.equals(req.user._id)) {
+            return res.status(403).send("You don't have clearance to delete this Fun Moment.");
+        }
 
+        const deletedFunMoment = await FunMoment.findByIdAndDelete(req.params.id);
+        res.status(200).json(deletedFunMoment);
 
-
-
+    } catch (err) {
+        res.status(500).json({ err: err.message });
+    }
+});
 
 // ---------------------------------------------------------------------------------------
 
