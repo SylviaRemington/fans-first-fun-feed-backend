@@ -192,7 +192,7 @@ router.post("/:id/comments", verifyToken, async (req, res) => {
         // Here is where appending the author property with a user object:
         newComment._doc.author = req.user;
 
-        
+
         // Responding with the newComment as a JSON response:
         res.status(201).json(newComment);
 
@@ -205,8 +205,31 @@ router.post("/:id/comments", verifyToken, async (req, res) => {
 
 // COMMENTS SECTION - UPDATE
 
+// UPDATED COMMENT - This is a PUT route - /funmoments/:id/comments/:commentId
+router.put("/:id/comments/:commentId", verifyToken, async (req, res) => {
+    try {
+        const funmoment = await FunMoment.findById(req.params.id);
+        const comment = funmoment.comments.id(req.params.commentId);
 
+        // This ensures that the current user is the author of the comment.
+        if (comment.author.toString() !== req.user._id) {
+            return res
+                .status(403)
+                .json({ message: "You are not authorized to edit this comment." });
+        }
 
+        comment.text = req.body.text;
+        await funmoment.save();
+        res.status(200).json({ message: "Your comment has been updated successfully!" });
+
+    } catch (err) {
+        res.status(500).json({ err: err.message });
+    }
+});
+
+// ---------------------------------------------------------------------------------------
+
+// COMMENTS SECTION - DELETE
 
 
 
