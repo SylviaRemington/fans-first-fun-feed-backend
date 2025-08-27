@@ -157,6 +157,9 @@ router.delete("/:id", verifyToken, async (req, res) => {
 // otherwise, will get either the 403 response I created or an invalid token error message.
 // After correcting those two things, got a 200 ok message & object was then deleted from database.
 
+// ! Yay! Finished building out basic CRUD functionality for funmoments! Yuuuuus. 
+// Now onto the comments section...cue drumroll or dramatic music here... 
+
 // ---------------------------------------------------------------------------------------
 
 // COMMENTS SECTION
