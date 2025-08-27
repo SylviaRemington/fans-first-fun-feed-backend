@@ -17,7 +17,7 @@ const funmomentsRouter = require("./controllers/funmoments.js"); //adding funmom
 mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connection.on('connected', () => {
-  
+
   // keeping this console log in so that I know that my Mongo database is connected and working in my terminal for greatest awareness & troubleshooting
   console.log(`Connected to MongoDB ${mongoose.connection.name}.`);
 });
@@ -70,3 +70,5 @@ to include a bearer token on all future requests for "FunMoment". By using a
 collection, all CRUD requests included in the collection will be able to share 
 the same token. Dooode, that makes it so much easier!!!!
 */
+
+
