@@ -272,6 +272,11 @@ router.delete("/:id/comments/:commentId", verifyToken, async (req, res) => {
     }
 });
 
+
+// All back-end routes have been set up to include: 
+// Signup route POST, Create route POST, Index GET, Show GET, Update PUT, Delete DELETE,
+// Create Comment POST, Update Comment PUT, Delete Comment DELETE
+
 // ---------------------------------------------------------------------------------------
 
 
