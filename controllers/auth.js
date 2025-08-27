@@ -59,7 +59,7 @@ router.post('/sign-in', async (req, res) => {
 });
 
 // SIGN-OUT ROUTE
-// Adding sign-out route
+// Adding sign-out route to fulfill project 3 requirements & also so this is a fully functioning app
 router.post('/sign-out', verifyToken, (req, res) => {
   res.status(200).json({ message: 'Signed out successfully' });
 });
