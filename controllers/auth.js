@@ -2,11 +2,13 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const verifyToken = require('../middleware/verify-token');
 
 const User = require('../models/User');
 
 const saltRounds = 12;
 
+// SIGN-UP ROUTE
 router.post('/sign-up', async (req, res) => { //sign-up route //as a result of this with Postman will be making requests to POST /auth/sign-up
   try {
     const userInDatabase = await User.findOne({ username: req.body.username });
@@ -31,6 +33,7 @@ router.post('/sign-up', async (req, res) => { //sign-up route //as a result of t
   }
 });
 
+// SIGN-IN ROUTE
 router.post('/sign-in', async (req, res) => {
   try {
     const user = await User.findOne({ username: req.body.username });
@@ -55,6 +58,7 @@ router.post('/sign-in', async (req, res) => {
   }
 });
 
+// SIGN-OUT ROUTE
 // Adding sign-out route
 router.post('/sign-out', verifyToken, (req, res) => {
   res.status(200).json({ message: 'Signed out successfully' });
