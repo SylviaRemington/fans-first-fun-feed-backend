@@ -205,6 +205,9 @@ router.post("/:id/comments", verifyToken, async (req, res) => {
     }
 });
 
+// Also, after creating new comment section, also updated the get show route (above) so that
+// both author of funmoment and author of the comments are represented.
+
 // ---------------------------------------------------------------------------------------
 
 // COMMENTS SECTION - UPDATE
