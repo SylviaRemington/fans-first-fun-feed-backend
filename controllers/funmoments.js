@@ -131,13 +131,20 @@ router.put("/:id", verifyToken, async (req, res) => {
 // User needs to be logged in to delete a hoot, so including verifyToken middleware
 router.delete("/:id", verifyToken, async (req, res) => {
     try {
+        // First, getting the funmoment from the database.
         const funmoment = await FunMoment.findById(req.params.id);
 
-        if (!funmoment.author.equals(req.user._id)) {
+        // Then, checking if user has permission to delete.
+        if (!funmoment.author.equals(req.user._id)) { //funmoment.author contains objectid of the user who created the funmoment
+            // If user doesn't have permission, responding with 403 which is "Forbidden" status.
             return res.status(403).send("You don't have clearance to delete this Fun Moment.");
         }
-
+        // If user has permission to delete, use findByIdAndDelete() method.
+        // Using req.params.id used to locate the funmoment that the user wants to delete
         const deletedFunMoment = await FunMoment.findByIdAndDelete(req.params.id);
+
+        // Responding with JSON response (as selected in Postman too) and then responding with the deletedFunMoment object.
+        // Also, using conditional rendering so that only the author of a funmoment can view the UI element for deleting it.
         res.status(200).json(deletedFunMoment);
 
     } catch (err) {
