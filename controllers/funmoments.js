@@ -246,28 +246,34 @@ router.put("/:id/comments/:commentId", verifyToken, async (req, res) => {
 // COMMENTS SECTION - DELETE
 
 // DELETED COMMENT - This is a DELETE route - /funmoments/:id/comments/:commentId
+// Like the update comment route, the delete route also has both a funmoment id and a commentId
+// A user needs to be logged on to delete the comment.
 router.delete("/:id/comments/:commentId", verifyToken, async (req, res) => {
     try {
+        // retrieving the funmoment
         const funmoment = await FunMoment.findById(req.params.id);
+        // retrieving the commentId from that particular funmoment
         const comment = funmoment.comments.id(req.params.commentId);
 
-        // ensures the current user is the author of the comment
+        // ensuring the current user is the author of the comment & if not, sending a 403 not authorized message.
         if (comment.author.toString() !== req.user._id) {
             return res
                 .status(403)
                 .json({ message: "You are not authorized to edit this comment." });
         }
 
+        // if current user did write comment, then can remove this comment. The comment will be a subdocument within the parent funmoment doc.
         funmoment.comments.remove({ _id: req.params.commentId });
         await funmoment.save();
+        // json response if successful deletion
         res.status(200).json({ message: "Your comment has been deleted successfully!" });
     } catch (err) {
         res.status(500).json({ err: err.message });
     }
 });
 
-
 // ---------------------------------------------------------------------------------------
+
 
 module.exports = router;
 
