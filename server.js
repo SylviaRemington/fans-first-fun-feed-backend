@@ -17,6 +17,8 @@ const funmomentsRouter = require("./controllers/funmoments.js"); //adding funmom
 mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connection.on('connected', () => {
+  
+  // keeping this console log in so that I know that my Mongo database is connected and working in my terminal for greatest awareness & troubleshooting
   console.log(`Connected to MongoDB ${mongoose.connection.name}.`);
 });
 
@@ -34,6 +36,8 @@ app.use("/funmoments", funmomentsRouter); //this is called "mount the router"
 
 // Start the server and listen on port 3000
 app.listen(3000, () => {
+
+  // keeping this console log in so that I'm aware that my express app is ready & isn't crashing. This is for awareness of terminal and of app working. This is necessary for an effective app!
   console.log('The express app is ready!');
 });
 // Perhaps could update server.js to listening this way instead: app.listen(process.env.PORT || 3000)
