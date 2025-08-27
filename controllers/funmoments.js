@@ -213,6 +213,8 @@ router.post("/:id/comments", verifyToken, async (req, res) => {
 // COMMENTS SECTION - UPDATE
 
 // UPDATED COMMENT - This is a PUT route - /funmoments/:id/comments/:commentId
+// This route requires both an id for the funmoment (which is the parent) AND an id for the comment (which is the child).
+// User needs to be logged in to update a comment, so need to add the verifyToken part.
 router.put("/:id/comments/:commentId", verifyToken, async (req, res) => {
     try {
         const funmoment = await FunMoment.findById(req.params.id);
