@@ -159,6 +159,19 @@ router.delete("/:id", verifyToken, async (req, res) => {
 
 // ---------------------------------------------------------------------------------------
 
+// COMMENTS SECTION
+
+// CREATE NEW COMMENT - This is a POST route - /funmoments/:id/comments
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------------------------------------
+
 module.exports = router;
 
 
