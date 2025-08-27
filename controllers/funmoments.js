@@ -24,17 +24,17 @@ const router = express.Router();
 // CREATE FUNMOMENT - This is a POST ROUTE - URL ends with /funmoments
 // We're defining the route here that listens for POST requests on /funmoments:
 router.post("/", verifyToken, async (req, res) => {
-   try {
-    // Adding logged-in user as the author
-    req.body.author = req.user._id;
-    // Creating the funmoment
-    const funmoment = await FunMoment.create(req.body);
-    funmoment._doc.author = req.user;
-    // Sending a json response here
-    res.status(201).json(funmoment);
-  } catch (err) {
-    res.status(500).json({ err: err.message });
-  }
+    try {
+        // Adding logged-in user as the author
+        req.body.author = req.user._id;
+        // Creating the funmoment
+        const funmoment = await FunMoment.create(req.body);
+        funmoment._doc.author = req.user;
+        // Sending a json response here
+        res.status(201).json(funmoment);
+    } catch (err) {
+        res.status(500).json({ err: err.message });
+    }
 });
 /*
 NOTE:
@@ -51,7 +51,7 @@ for handling authentication when securing routes individually.
 router.get("/", verifyToken, async (req, res) => {
     try {
         // Using find({}) method of the FunMoment model to retrieve all funmoments from the database
-        const funmoments= await FunMoment.find({})
+        const funmoments = await FunMoment.find({})
             // populating method - using this to populate the author property of each funmoment with a user object
             .populate("author")
             // sort method - using this method to sort funmoments in descending order (so that the most recent entries are at the top)
@@ -73,7 +73,11 @@ router.get("/", verifyToken, async (req, res) => {
 router.get("/:id", verifyToken, async (req, res) => {
     try {
         // findById method passing in the req.params.id & populating the author of the funmoment detail
-        const funmoment = await FunMoment.findById(req.params.id).populate("author");
+        const funmoment = await FunMoment.findById(req.params.id).populate([
+            // slight change to code: populating both author of funmoment AND author of each comment in the comments array.
+            'author',
+            'comments.author',
+        ]);
         // once fun moment is retrieved, sending a json response with the funmoment object
         res.status(200).json(funmoment);
     } catch (err) {
