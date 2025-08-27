@@ -152,6 +152,11 @@ router.delete("/:id", verifyToken, async (req, res) => {
     }
 });
 
+// Addtl notes for testing deleting a funmoment:  
+// Make sure object id of fun moment & author token are congruent (when testing);
+// otherwise, will get either the 403 response I created or an invalid token error message.
+// After correcting those two things, got a 200 ok message & object was then deleted from database.
+
 // ---------------------------------------------------------------------------------------
 
 module.exports = router;
