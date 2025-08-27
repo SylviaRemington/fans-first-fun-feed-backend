@@ -162,11 +162,48 @@ router.delete("/:id", verifyToken, async (req, res) => {
 
 // ---------------------------------------------------------------------------------------
 
-// COMMENTS SECTION
+// COMMENTS SECTION - CREATE
 
 // CREATE NEW COMMENT - This is a POST route - /funmoments/:id/comments
+// A user needs to be logged in to create a comment - thus, verifyToken middleware.
+router.post("/:id/comments", verifyToken, async (req, res) => {
+    try {
+        // First need to append the req.user._id to the req.body.author.
+        // This makes sure that the logged-in user is marked as the author of the comment, & this updates the form data that will be used to create this.
+        req.body.author = req.user._id;
+
+        // findById to retrieve the funmoment (and note: the retrieved funmoment is the parent document that the user is adding a comment to.)
+        const funmoment = await FunMoment.findById(req.params.id);
+
+        // Adding new comment data to the comments array (which is in the funmoment document).
+        funmoment.comments.push(req.body);
+
+        // This saves the comment to my database - Using the save() method for the funmoment.
+        await funmoment.save();
+        // The 4 lines of code above goes together; however, because I have notes explaining this, I'm separating it for better readability.
 
 
+        // Finding the newly created comment:
+        // After saving the funmoments document, this is where locating the newComment using 
+        // its position at the end of the funmoments.comments array.
+        const newComment = funmoment.comments[funmoment.comments.length - 1];
+
+
+        // Here is where appending the author property with a user object:
+        newComment._doc.author = req.user;
+
+        
+        // Responding with the newComment as a JSON response:
+        res.status(201).json(newComment);
+
+    } catch (err) {
+        res.status(500).json({ err: err.message });
+    }
+});
+
+// ---------------------------------------------------------------------------------------
+
+// COMMENTS SECTION - UPDATE
 
 
 
