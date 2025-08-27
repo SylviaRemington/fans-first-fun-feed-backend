@@ -245,6 +245,9 @@ router.put("/:id/comments/:commentId", verifyToken, async (req, res) => {
 
 // COMMENTS SECTION - DELETE
 
+// DELETED COMMENT - This is a DELETE route - /funmoments/:id/comments/:commentId
+
+
 
 
 // ---------------------------------------------------------------------------------------
