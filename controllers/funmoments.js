@@ -246,8 +246,25 @@ router.put("/:id/comments/:commentId", verifyToken, async (req, res) => {
 // COMMENTS SECTION - DELETE
 
 // DELETED COMMENT - This is a DELETE route - /funmoments/:id/comments/:commentId
+router.delete("/:id/comments/:commentId", verifyToken, async (req, res) => {
+    try {
+        const funmoment = await FunMoment.findById(req.params.id);
+        const comment = funmoment.comments.id(req.params.commentId);
 
+        // ensures the current user is the author of the comment
+        if (comment.author.toString() !== req.user._id) {
+            return res
+                .status(403)
+                .json({ message: "You are not authorized to edit this comment." });
+        }
 
+        funmoment.comments.remove({ _id: req.params.commentId });
+        await funmoment.save();
+        res.status(200).json({ message: "Your comment has been deleted successfully!" });
+    } catch (err) {
+        res.status(500).json({ err: err.message });
+    }
+});
 
 
 // ---------------------------------------------------------------------------------------
