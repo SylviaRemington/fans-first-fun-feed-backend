@@ -217,18 +217,23 @@ router.post("/:id/comments", verifyToken, async (req, res) => {
 // User needs to be logged in to update a comment, so need to add the verifyToken part.
 router.put("/:id/comments/:commentId", verifyToken, async (req, res) => {
     try {
+        // retrieving FunMoment model - the retrieved funmoment is the parent that holds the comments array
         const funmoment = await FunMoment.findById(req.params.id);
+        // need to find the specific comment that user wants to update
         const comment = funmoment.comments.id(req.params.commentId);
 
-        // This ensures that the current user is the author of the comment.
+        // ensuring that the current user is the author of the comment
         if (comment.author.toString() !== req.user._id) {
             return res
                 .status(403)
                 .json({ message: "You are not authorized to edit this comment." });
         }
 
+        // with retrieved comment, updating text property with the req.body.text
         comment.text = req.body.text;
+        // saving it - saving the parent document
         await funmoment.save();
+        // json response with updated successfully message
         res.status(200).json({ message: "Your comment has been updated successfully!" });
 
     } catch (err) {
