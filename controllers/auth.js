@@ -55,5 +55,10 @@ router.post('/sign-in', async (req, res) => {
   }
 });
 
+// Adding sign-out route
+router.post('/sign-out', verifyToken, (req, res) => {
+  res.status(200).json({ message: 'Signed out successfully' });
+});
+
 module.exports = router;
 

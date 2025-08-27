@@ -36,6 +36,7 @@ app.use("/funmoments", funmomentsRouter); //this is called "mount the router"
 app.listen(3000, () => {
   console.log('The express app is ready!');
 });
+// Perhaps could update server.js to listening this way instead: app.listen(process.env.PORT || 3000)
 
 // Because above listening on port 3000 in server.js...
 // Will show output here: http://localhost:3000
