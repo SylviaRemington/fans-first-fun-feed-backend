@@ -73,6 +73,7 @@ router.get("/", verifyToken, async (req, res) => {
 router.get("/:id", verifyToken, async (req, res) => {
     try {
         // findById method passing in the req.params.id & populating the author of the funmoment detail
+        // changed to populate both author of funmoment and author comments
         const funmoment = await FunMoment.findById(req.params.id).populate([
             // slight change to code: populating both author of funmoment AND author of each comment in the comments array (so both are populated).
             'author',

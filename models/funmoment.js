@@ -39,10 +39,13 @@ const FunMomentSchema = new mongoose.Schema({
     category: {
         type: String,
         required: true,
+        // enums
         enum: ['Trick Plays', 'Cool Dances', 'Songs Sung', 'Individual Players', 'Dad Bod Squad', 'Princess', 'Umpire', 'Mascot'],
         // Could also add which specific team it's related to -- this could be a stretch goal
     },
+    // referencing
     author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+    // comments are embedded into the funmoment FunMomentSchema
     comments: [CommentSchema], 
 },
 
@@ -106,6 +109,7 @@ best practice.
 React Context: Since you mentioned a React app, these conventions apply to your backend (Node.js/Mongoose). 
 For React components, also use PascalCase (e.g., FunMomentCard.js).
 */
+
 
 
 
