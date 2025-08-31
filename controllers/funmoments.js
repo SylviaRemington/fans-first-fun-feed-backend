@@ -188,7 +188,7 @@ router.post("/:id/comments", verifyToken, async (req, res) => {
         // The 4 lines of code above goes together; however, because I have notes explaining this, I'm separating it for better readability.
 
 
-        // Finding the newly created comment:
+        // **Finding the newly created comment**
         // After saving the funmoments document, this is where locating the newComment using 
         // its position at the end of the funmoments.comments array.
         const newComment = funmoment.comments[funmoment.comments.length - 1];
@@ -198,7 +198,7 @@ router.post("/:id/comments", verifyToken, async (req, res) => {
         newComment._doc.author = req.user;
 
 
-        // Responding with the newComment as a JSON response:
+        // **Responding with the newComment as a JSON response**
         res.status(201).json(newComment);
 
     } catch (err) {
