@@ -40,7 +40,7 @@ const FunMomentSchema = new mongoose.Schema({
         type: String,
         required: true,
         // enums
-        enum: ['Trick Plays', 'Cool Dances', 'Songs Sung', 'Individual Players', 'Dad Bod Squad', 'Princess', 'Umpire', 'Mascot'],
+        enum: ['Trick Plays', 'Cool Dances', 'Songs Sung', 'Individual Players', 'Dad Bod Squad', 'Princess', 'Umpire Moves', 'Mascot', 'Funny Audience Games'],
         // Could also add which specific team it's related to -- this could be a stretch goal
     },
     // referencing
