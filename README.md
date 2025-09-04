@@ -1,8 +1,9 @@
 NAME OF MY PROJECT #3:
 # Fans First Fun Feed
 
-**BACKEND EXPRESS API CREATION -- Started August 21st, 2025 for GA Project #3** <br>
-**We have one week to complete this project.**
+**BACKEND EXPRESS API CREATION** <br>
+<!-- **-- Started August 21st, 2025 for GA Project #3** -->
+<!-- **We have one week to complete this project.** -->
 
 <!-- <p align="center">
   <img src="./public/images/smallerFansFirst.png) " alt="Fans First Fun Image" /><br>
