@@ -1,4 +1,3 @@
-NAME OF MY PROJECT #3:
 # Fans First Fun Feed (BACKEND)
 
 **BACKEND EXPRESS API CREATION** <br>
