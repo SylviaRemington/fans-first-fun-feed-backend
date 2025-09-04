@@ -5,6 +5,8 @@ NAME OF MY PROJECT #3:
 <!-- **-- Started August 21st, 2025 for GA Project #3** -->
 <!-- **We have one week to complete this project.** -->
 
+LINK TO FRONT END GITHUB REPO: https://github.com/SylviaRemington/fans-first-fun-feed-frontend
+
 <!-- <p align="center">
   <img src="./public/images/smallerFansFirst.png) " alt="Fans First Fun Image" /><br>
   <b>Fans First Fun Feed App Image</b>
