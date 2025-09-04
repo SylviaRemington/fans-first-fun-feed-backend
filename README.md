@@ -33,5 +33,6 @@ Thus, to recap, I’ll build an Express API that serves as the BACKEND for a ful
 **Postman Testing Image**
 ![PostmanTestingImage](./public/images/Postman%20Routes.png) 
 
-**For Full README, please go to FRONTEND portion of this app at: https://github.com/SylviaRemington/fans-first-fun-feed-frontend**
+<hr>
 
+**For Full README, please go to FRONTEND portion of this app at: https://github.com/SylviaRemington/fans-first-fun-feed-frontend**
