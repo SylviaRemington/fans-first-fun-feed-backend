@@ -16,7 +16,9 @@
 
 This app is a **MERN stack app** for **Savannah Bananas** fans.
 
-**Savannah Bananas is an alternative baseball team known for dances, trick plays, and fan engagement**. The initial idea was for it to be called: The Banana Fan Dance and Moment Share App. 
+**Savannah Bananas is an alternative baseball team known for dances, trick plays, and fan engagement**. 
+
+The initial idea was for it to be called: The Banana Fan Dance and Moment Share App. 
 
 - Live fans will be able to add dance moves (name, type) to perform at games; while both live and online fans will be able to share favorite, awesome moments from the game (text, category like trick plays, dance moves, or Dad-bod-cheer-squad) inspired by game events or IG videos. 
 
@@ -26,7 +28,10 @@ This app is a **MERN stack app** for **Savannah Bananas** fans.
 
 This app will, most likely, be simplified a lot; and start out as a way for fans to share great, fun moments from the game. Once I have that CRUD functionality accomplished, I will move on to creating the dance move part of it. That will be more for a stretch goal; and this stretch goal portion may be accomplished after the Project 3 deadline (since we only have a week to create a full stack app with both BACKEND and FRONTEND).
 
-In this, I’ll build an Express API that serves as the BACKEND for a full-stack "moment-sharing" application called Fans First Fun Feed. Within this Express API, I’ll implement full CRUD functionality and test it with Postman.
+Thus, to recap, I’ll build an Express API that serves as the BACKEND for a full-stack "moment-sharing" application called Fans First Fun Feed. Within this Express API, I’ll implement full CRUD functionality and test it with Postman.
+
+**Postman Testing Image**
+![PostmanTestingImage](./public/images/Postman%20Routes.png) 
 
 **For Full README, please go to FRONTEND portion of this app at: https://github.com/SylviaRemington/fans-first-fun-feed-frontend**
 
