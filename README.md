@@ -1,5 +1,5 @@
 NAME OF MY PROJECT #3:
-# Fans First Fun Feed
+# Fans First Fun Feed (BACKEND)
 
 **BACKEND EXPRESS API CREATION** <br>
 <!-- **-- Started August 21st, 2025 for GA Project #3** -->
