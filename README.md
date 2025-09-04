@@ -4,8 +4,6 @@
 <!-- **-- Started August 21st, 2025 for GA Project #3** -->
 <!-- **We have one week to complete this project.** -->
 
-**LINK TO FRONTEND GITHUB REPO:** https://github.com/SylviaRemington/fans-first-fun-feed-frontend
-
 <!-- <p align="center">
   <img src="./public/images/smallerFansFirst.png) " alt="Fans First Fun Image" /><br>
   <b>Fans First Fun Feed App Image</b>
@@ -26,7 +24,10 @@ This app is going to be a **MERN stack app** for **Savannah Bananas** fans.
 This app will, most likely, be simplified a lot; and start out as a way for fans to share great, fun moments from the game. Once I have that CRUD functionality accomplished, I will move on to creating the dance move part of it. That will be more for a stretch goal; and this stretch goal portion may be accomplished after the Project 3 deadline (since we only have a week to create a full stack app with both backend and front end).
 
 ### Addtl:
-In this, I’ll build an Express API that serves as the back-end for a full-stack "moment-sharing" application called Fans First Fun Feed. Within this Express API, I’ll implement full CRUD functionality.
+In this, I’ll build an Express API that serves as the back-end for a full-stack "moment-sharing" application called Fans First Fun Feed. Within this Express API, I’ll implement full CRUD functionality and test it with Postman.
+
+### For more details on this project, below please find link to FRONTEND
+**LINK TO FRONTEND GITHUB REPO:** https://github.com/SylviaRemington/fans-first-fun-feed-frontend
 
 ### About Express API JWT Auth Template:
 My Express API will make use of the Express API JWT Auth Template. This template provides this Express application with pre configured JWT Authentication. This style of authentication in HTTP uses tokens, or unique identifier strings, to tell who a user is when they’re making an authenticated request.
