@@ -11,7 +11,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <hr>
 
 **DISCLAIMER** <br><br>
-**This project is a fan-made, educational endeavor created for learning purposes only. It is not affiliated with, endorsed by, or sponsored Savannah Bananas, Banana Ball, Fans First Entertainment or any related entities. All Savannah Bananas intellectual property belongs to their respective owners. This app is non-commercial, free to use, and not intended for profit.**
+**This project is a fan-made, educational endeavor created for learning purposes only. It is not affiliated with, endorsed by, or sponsored by Savannah Bananas, Banana Ball, Fans First Entertainment, or any related entities. All Savannah Bananas intellectual property belongs to their respective owners. This app is non-commercial, free to use, and not intended for profit.**
 
 <br>
 
