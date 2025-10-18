@@ -1,6 +1,6 @@
-MIT License
+**MIT License**
 
-Copyright (c) 2025 Sylvia Remington
+**Copyright (c) 2025 Sylvia Remington**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -10,5 +10,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 <hr>
 
-DISCLAIMER <br>
-This project is a fan-made, educational endeavor created for learning purposes only. It is not affiliated with, endorsed by, or sponsored Savannah Bananas, Banana Ball, Fans First Entertainment or any related entities. All Savannah Bananas intellectual property belongs to their respective owners. This app is non-commercial, free to use, and not intended for profit.
+**DISCLAIMER** <br><br>
+**This project is a fan-made, educational endeavor created for learning purposes only. It is not affiliated with, endorsed by, or sponsored Savannah Bananas, Banana Ball, Fans First Entertainment or any related entities. All Savannah Bananas intellectual property belongs to their respective owners. This app is non-commercial, free to use, and not intended for profit.**
+
+<br>
+
+<hr>
