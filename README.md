@@ -4,9 +4,8 @@
 <!-- **-- Started August 21st, 2025 for GA Project #3** -->
 <!-- **We have one week to complete this project.** -->
 
-**LINK TO FRONTEND GITHUB REPO:** https://github.com/SylviaRemington/fans-first-fun-feed-frontend <br>
-
-**Frontend Deployed Link At:** https://fans-first-fun-feed-frontend.netlify.app/
+**LINK TO FRONTEND GITHUB REPO:** https://github.com/SylviaRemington/fans-first-fun-feed-frontend <br><br>
+**Frontend Deployed Link At:** https://fans-first-fun-feed-frontend.netlify.app/ <br><br>
 **Backend Deployed Link At:** https://git.heroku.com/fans-first-fun-feed-backend.git
 
 
