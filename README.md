@@ -5,7 +5,9 @@
 <!-- **We have one week to complete this project.** -->
 
 **LINK TO FRONTEND GITHUB REPO:** https://github.com/SylviaRemington/fans-first-fun-feed-frontend <br>
-**Deployed Link At:** https://git.heroku.com/fans-first-fun-feed-backend.git
+
+**Frontend Deployed Link At:** https://fans-first-fun-feed-frontend.netlify.app/
+**Backend Deployed Link At:** https://git.heroku.com/fans-first-fun-feed-backend.git
 
 
 <!-- <p align="center">
