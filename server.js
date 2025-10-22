@@ -37,6 +37,40 @@ app.use("/funmoments", funmomentsRouter); //this is called "mount the router"
 // Start the server and listen on port 3000
 app.listen(3000, () => {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   // keeping this console log in so that I'm aware that my express app is ready & isn't crashing. This is for awareness of terminal and of app working. This is necessary for an effective app!
   console.log('The express app is ready!');
 });
