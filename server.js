@@ -33,47 +33,48 @@ app.use('/test-jwt', testJwtRouter);
 app.use('/users', usersRouter);
 app.use("/funmoments", funmomentsRouter); //this is called "mount the router"
 
-
+const PORT= process.env.PORT
 // Start the server and listen on port 3000
-app.listen(3000, () => {
+app.listen(PORT, () => {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
   // keeping this console log in so that I'm aware that my express app is ready & isn't crashing. This is for awareness of terminal and of app working. This is necessary for an effective app!
   console.log('The express app is ready!');
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Perhaps could update server.js to listening this way instead: app.listen(process.env.PORT || 3000)
 
 // Because above listening on port 3000 in server.js...
